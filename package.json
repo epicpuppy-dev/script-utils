@@ -1,0 +1,23 @@
+{
+  "name": "@epicpuppy-dev/script-utils",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/epicpuppy-dev/script-utils#readme",
+  "bugs": {
+    "url": "https://github.com/epicpuppy-dev/script-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epicpuppy-dev/script-utils.git"
+  },
+  "license": "MIT",
+  "author": "EpicPuppy613",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
