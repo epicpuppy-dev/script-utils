@@ -140,3 +140,6 @@ Tasks can be defined in some other file and imported into the main script file. 
 - Multi-containers: Allows containers to store multiple entries of data
 - `ScriptUtils` class: A tool for creating a CLI to run scripts without having to run them individually. Not strictly required for scripts, but useful for larger script collections.
 - User input methods: Allows tasks to request user input through the `Runtime` interface
+- Asynchronus ("parallel") execution: Allows the execution of tasks that don't depend on each other at the same time
+- File containers: Allows containers to store data in files
+- Task run cache: Caches the results of task runs with the same input data to speed up repeated runs (Can be disabled per-task)
