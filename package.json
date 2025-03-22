@@ -21,5 +21,8 @@
     "typescript": "^5.8.2",
     "@types/chalk": "^0.4.31",
     "@types/node": "^22.13.11"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
