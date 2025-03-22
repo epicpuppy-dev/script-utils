@@ -1,6 +1,6 @@
 # script-utils
 
-A small library for creating and running modular scripts. Works off of a reuable task-based system.
+A small library for creating and running modular scripts. Works off of a reusable task-based system.
 
 **Not designed for production use**
 
