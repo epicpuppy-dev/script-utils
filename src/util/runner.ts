@@ -11,34 +11,35 @@ export class Runner {
 
     public log (message: string) {
         if (Runtime.mode == RunMode.LOG) {
-            console.log(message);
+            console.log(" -> " + message);
         } else {
             process.stdout.clearLine(0);
-            console.log(message);
+            console.log(" -> " + message);
             this.progressLine();
         }
     }
     public warn (message: string) {
         if (Runtime.mode == RunMode.LOG) {
-            console.warn(this.ch.yellow(message));
+            console.warn(this.ch.yellow(" -> " + message));
         } else {
             process.stdout.clearLine(0);
-            console.warn(this.ch.yellow(message));
+            console.warn(this.ch.yellow(" -> " + message));
             this.progressLine();
         }
     }
     public error (message: string) {
         if (Runtime.mode == RunMode.LOG) {
-            console.error(this.ch.red(message));
+            console.error(this.ch.red(" -> " + message));
         } else {
             process.stdout.clearLine(0);
-            console.error(this.ch.red(message));
+            console.error(this.ch.red(" -> " + message));
         }
         throw new Error(message);
     }
     public progress (info: string = "") {
         if (Runtime.mode != RunMode.PROGRESS) return;
         this.progressMessage = info;
+        process.stdout.clearLine(0);
         this.progressLine();
     }
     private progressLine() {
