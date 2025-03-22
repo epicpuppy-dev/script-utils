@@ -15,7 +15,8 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc",
+    "prepack": "npm run build"
   },
   "devDependencies": {
     "typescript": "^5.8.2",
