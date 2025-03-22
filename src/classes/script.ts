@@ -37,13 +37,13 @@ export class Script<T extends unknown[]> extends Runtime {
             const task = this.tasks[i];
             Runtime.runner.task = i;
             Runtime.runner.taskName = task.name;
-            Runtime.runner.log(this.ch.blueBright.bold(`=> [${i + 1}/${this.tasks.length}] ${task.name}`));
+            Runtime.runner.log(this.ch.blueBright.bold(`=> [${i + 1}/${this.tasks.length}] ${task.name}`), 0);
             try {
                 task.populate(Runtime.containers);
                 await task.run();
                 task.export(Runtime.containers);
             } catch (e) {
-                Runtime.runner.error(this.ch.red.bold(`=> Script execution failed at task '${task.name}' - ${e}`));
+                Runtime.runner.error(this.ch.red.bold(`=> Script execution failed at task '${task.name}' - ${e}`), 0);
             }
         }
         if (Runtime.mode == RunMode.PROGRESS) {
