@@ -18,10 +18,13 @@
     "build": "rm -rf dist && tsc",
     "prepack": "npm run build"
   },
+  "dependencies": {
+    "chalk": "^5.4.1"
+  },
   "devDependencies": {
-    "typescript": "^5.8.2",
     "@types/chalk": "^0.4.31",
-    "@types/node": "^22.13.11"
+    "@types/node": "^22.13.11",
+    "typescript": "^5.8.2"
   },
   "files": [
     "dist"
